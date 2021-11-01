@@ -5,20 +5,7 @@ return [
     'storage' => [
         'local' => [
             'driver' => \yzh52521\filesystem\Adapter\LocalAdapter::class,
-            'root' => public_path(),
-        ],
-        'ftp' => [
-            'driver' => \yzh52521\filesystem\Adapter\FtpAdapter::class,
-            'host' => 'ftp.example.com',
-            'username' => 'username',
-            'password' => 'password',
-            // 'port' => 21,
-            // 'root' => '/path/to/root',
-            // 'passive' => true,
-            // 'ssl' => true,
-            // 'timeout' => 30,
-            // 'ignorePassiveAddress' => false,
-            // 'timestampsOnUnixListingsEnabled' => true,
+            'root' => '',
         ],
         'memory' => [
             'driver' => \yzh52521\filesystem\Adapter\MemoryAdapter::class,
@@ -33,19 +20,6 @@ return [
             'version' => 'latest',
             'bucket_endpoint' => false,
             'use_path_style_endpoint' => false,
-            'endpoint' => 'S3_ENDPOINT',
-            'bucket_name' => 'S3_BUCKET',
-        ],
-        'minio' => [
-            'driver' => \yzh52521\filesystem\Adapter\S3Adapter::class,
-            'credentials' => [
-                'key' => 'S3_KEY',
-                'secret' => 'S3_SECRET',
-            ],
-            'region' => 'S3_REGION',
-            'version' => 'latest',
-            'bucket_endpoint' => false,
-            'use_path_style_endpoint' => true,
             'endpoint' => 'S3_ENDPOINT',
             'bucket_name' => 'S3_BUCKET',
         ],
