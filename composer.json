@@ -1,0 +1,28 @@
+{
+  "name": "yzh52521/webman-filesystem",
+  "description": "Flysystem V2 adapter for the webman",
+  "keywords": ["webman", "filesystem", "ftp","s3","oss","cos","qiniu"],
+  "type": "library",
+  "require": {
+    "php": ">=7.2",
+    "league/flysystem": "^2.3",
+    "yzh52521/flysystem-aliyun-oss": "^2.0",
+    "league/flysystem-aws-s3-v3":"^2.0",
+    "overtrue/flysystem-qiniu":"^2.0",
+    "league/flysystem-memory":"^2.0",
+    "league/flysystem-ftp":"^2.0",
+    "overtrue/flysystem-cos":"^4.0"
+  },
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "yzh52521\\filesystem\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "yzh52521",
+      "email": "396751927@qq.com"
+    }
+  ]
+}
