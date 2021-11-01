@@ -134,9 +134,8 @@ composer require "overtrue/flysystem-cos:^4.0"
     public function upload(Request $request)
     {
         $file = $request->file('file');
-        $filesystem =  FilesystemFactory::storage('local');
         $stream = fopen($file->getRealPath(), 'r+');
-        $filesystem->writeStream(
+        Filesystem::writeStream(
             'uploads/'.$file->getUploadName(),
             $stream
         );
