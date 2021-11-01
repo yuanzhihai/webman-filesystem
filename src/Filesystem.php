@@ -28,14 +28,30 @@ class Filesystem
     public static function storage($adapterName = null): FilesystemObj
     {
         if (!static::$_instance) {
-            $options = config('filesystem');
+            $options =  self::getConfig();
             if (is_null($adapterName)) {
                 $adapterName = $options['default'];
             }
             $adapter           = static::getAdapter($options, $adapterName);
-            static::$_instance = new Filesystem($adapter, $options['storage'][$adapterName] ?? []);
+            static::$_instance = new FilesystemObj($adapter, $options['storage'][$adapterName] ?? []);
         }
         return static::$_instance;
+    }
+
+    public static function getConfig(string $name = null)
+    {
+        if (!is_null($name)) {
+            return config('filesystem.' . $name);
+        }
+        return config('filesystem');
+    }
+
+    public static function getStorageConfig($adapterName, $name = null)
+    {
+        if ($config = self::getConfig("storage.{$adapterName}")) {
+            return $config[$name];
+        }
+        throw new InvalidArgumentException("storage [$adapterName] not found.");
     }
 
     public static function getAdapter($options, $adapterName)
