@@ -33,7 +33,7 @@ class Filesystem
                 $adapterName = $options['default'];
             }
             $adapter           = static::getAdapter($options, $adapterName);
-            static::$_instance = new Filesystem($adapter, $options['storage'][$adapterName] ?? []);
+            static::$_instance = new FilesystemObj($adapter, $options['storage'][$adapterName] ?? []);
         }
         return static::$_instance;
     }
