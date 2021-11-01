@@ -106,11 +106,13 @@ composer require "overtrue/flysystem-cos:^4.0"
     {
         $file = $request->file('file');
         $stream = fopen($file->getRealPath(), 'r+');
+        $path='uploads/'.$file->getUploadName();
         Filesystem::writeStream(
-            'uploads/'.$file->getUploadName(),
+            $path,
             $stream
         );
         fclose($stream);
+        return Filesystem::getStorageConfig('local','url').$path;
         
         // Write Files
         $filesystem->write('path/to/file.txt', 'contents');
