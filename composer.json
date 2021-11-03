@@ -7,6 +7,7 @@
     "php": ">=7.2",
     "league/flysystem": "^2.3",
     "yzh52521/flysystem-oss": "^2.0",
+    "yzh52521/flysystem-obs":"^2.0",
     "league/flysystem-aws-s3-v3":"^2.0",
     "overtrue/flysystem-qiniu":"^2.0",
     "league/flysystem-memory":"^2.0",
