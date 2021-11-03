@@ -74,7 +74,7 @@ return [
 - 阿里云 OSS 适配器
 
 ```
-composer require "yzh52521/flysystem-aliyun-oss:^2.0"
+composer require "yzh52521/flysystem-oss:^2.0"
 ```
 - S3 适配器
 
