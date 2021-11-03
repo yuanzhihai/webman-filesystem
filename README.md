@@ -96,6 +96,12 @@ composer require "league/flysystem-memory:^2.0"
 ```
 composer require "overtrue/flysystem-cos:^4.0"
 ```
+
+- 华为云 OBS 适配器
+
+```
+composer require "yzh52521/flysystem-obs:^2.0"
+```
 # 使用
 
 通过Filesystem::storage('local') 来调用不同的适配器
