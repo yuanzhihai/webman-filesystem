@@ -3,10 +3,10 @@
 declare(strict_types=1);
 
 
-namespace yzh52521\filesystem\Adapter;
+namespace yzh52521\Filesystem\Adapter;
 
 
-use yzh52521\filesystem\Contract\AdapterInterface;
+use yzh52521\Filesystem\Contract\AdapterInterface;
 use League\Flysystem\Local\LocalFilesystemAdapter;
 
 class LocalAdapter implements AdapterInterface

@@ -15,7 +15,7 @@
   "license": "MIT",
   "autoload": {
     "psr-4": {
-      "yzh52521\\filesystem\\": "src/"
+      "yzh52521\\Filesystem\\": "src/"
     }
   },
   "authors": [

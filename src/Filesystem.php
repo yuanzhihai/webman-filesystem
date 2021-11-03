@@ -1,9 +1,8 @@
 <?php
 
-namespace yzh52521\filesystem;
+namespace yzh52521\Filesystem;
 
-use yzh52521\filesystem\Adapter\LocalAdapter;
-use yzh52521\filesystem\Contract\AdapterInterface;
+use yzh52521\Filesystem\Contract\AdapterInterface;
 use League\Flysystem\Config;
 use League\Flysystem\Filesystem as FilesystemObj;
 use support\Container;

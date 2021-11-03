@@ -1,6 +1,6 @@
 <?php
 
-namespace yzh52521\filesystem\Contract;
+namespace yzh52521\Filesystem\Contract;
 
 
 interface AdapterInterface

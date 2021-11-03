@@ -11,15 +11,15 @@ return [
     'default' => 'local',
     'storage' => [
         'local' => [
-            'driver' => \yzh52521\filesystem\Adapter\LocalAdapter::class,
+            'driver' => \yzh52521\Filesystem\Adapter\LocalAdapter::class,
             'root' => public_path(),
         ],
        
         'memory' => [
-            'driver' => \yzh52521\filesystem\Adapter\MemoryAdapter::class,
+            'driver' => \yzh52521\Filesystem\Adapter\MemoryAdapter::class,
         ],
         's3' => [
-            'driver' => \yzh52521\filesystem\Adapter\S3Adapter::class,
+            'driver' => \yzh52521\Filesystem\Adapter\S3Adapter::class,
             'credentials' => [
                 'key' => 'S3_KEY',
                 'secret' => 'S3_SECRET',
@@ -33,7 +33,7 @@ return [
         ],
       
         'oss' => [
-            'driver' => \yzh52521\filesystem\Adapter\AliyunAdapter::class,
+            'driver' => \yzh52521\Filesystem\Adapter\AliyunAdapter::class,
             'accessId' => 'OSS_ACCESS_ID',
             'accessSecret' => 'OSS_ACCESS_SECRET',
             'bucket' => 'OSS_BUCKET',
@@ -45,14 +45,14 @@ return [
             // 'proxy' => null,
         ],
         'qiniu' => [
-            'driver' => \yzh52521\filesystem\Adapter\QiniuAdapter::class,
+            'driver' => \yzh52521\Filesystem\Adapter\QiniuAdapter::class,
             'accessKey' => 'QINIU_ACCESS_KEY',
             'secretKey' => 'QINIU_SECRET_KEY',
             'bucket' => 'QINIU_BUCKET',
             'domain' => 'QINBIU_DOMAIN',
         ],
         'cos' => [
-            'driver' => \yzh52521\filesystem\Adapter\CosAdapter::class,
+            'driver' => \yzh52521\Filesystem\Adapter\CosAdapter::class,
             'region' => 'COS_REGION',
             'app_id' => 'COS_APPID',
             'secret_id' => 'COS_SECRET_ID',
@@ -101,7 +101,7 @@ composer require "overtrue/flysystem-cos:^4.0"
 通过Filesystem::storage('local') 来调用不同的适配器
 
 ```
-    use yzh52521\filesystem\Filesystem;
+    use yzh52521\Filesystem\Filesystem;
     public function upload(Request $request)
     {
         $file = $request->file('file');

@@ -3,14 +3,14 @@
 declare(strict_types=1);
 
 
-namespace yzh52521\filesystem\Adapter;
+namespace yzh52521\Filesystem\Adapter;
 
 use Aws\Handler\GuzzleV6\GuzzleHandler;
 use Aws\S3\S3Client;
 use GuzzleHttp\Client;
 use GuzzleHttp\HandlerStack;
 use League\Flysystem\AwsS3V3\AwsS3V3Adapter;
-use yzh52521\filesystem\Contract\AdapterInterface;
+use yzh52521\Filesystem\Contract\AdapterInterface;
 
 class S3Adapter implements AdapterInterface
 {
