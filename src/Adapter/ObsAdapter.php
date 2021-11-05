@@ -10,6 +10,6 @@ class ObsAdapter implements AdapterInterface
 {
     public function createAdapter(array $options)
     {
-        return new yzh52521\Filesystem\Obs\ObsAdapter($options);
+        return new \yzh52521\Flysystem\Obs\ObsAdapter($options);
     }
 }
