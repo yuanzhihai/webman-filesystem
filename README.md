@@ -1,3 +1,5 @@
+#推荐使用插件 https://github.com/yzh52521/ilesystem
+
 # 安装
 
 ```
